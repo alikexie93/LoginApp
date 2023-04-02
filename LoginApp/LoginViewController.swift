@@ -26,6 +26,11 @@ final class LoginViewController: UIViewController {
         welcomeVC.usernameLabel = usernameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //MARK: - IBActions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTF.text = ""
         passwordTF.text = ""
@@ -87,6 +92,7 @@ final class LoginViewController: UIViewController {
         )
     }
     
+    //MARK: - Private method
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
