@@ -15,6 +15,9 @@
 		08270D2229D971AC009D5DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08270D2029D971AC009D5DB8 /* LaunchScreen.storyboard */; };
 		08270D2A29D97AE0009D5DB8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08270D2929D97AE0009D5DB8 /* WelcomeViewController.swift */; };
 		089895AD29DDCF400042B2F9 /* PersonalDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089895AC29DDCF400042B2F9 /* PersonalDatas.swift */; };
+		089895B129DDD85D0042B2F9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089895B029DDD85D0042B2F9 /* TabBarViewController.swift */; };
+		089895B329DDD8BA0042B2F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089895B229DDD8BA0042B2F9 /* AboutViewController.swift */; };
+		089895B529DE00D20042B2F9 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089895B429DE00D20042B2F9 /* BiographyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		08270D2329D971AC009D5DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08270D2929D97AE0009D5DB8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		089895AC29DDCF400042B2F9 /* PersonalDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDatas.swift; sourceTree = "<group>"; };
+		089895B029DDD85D0042B2F9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		089895B229DDD8BA0042B2F9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		089895B429DE00D20042B2F9 /* BiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 			children = (
 				08270D1929D971AA009D5DB8 /* LoginViewController.swift */,
 				08270D2929D97AE0009D5DB8 /* WelcomeViewController.swift */,
+				089895B029DDD85D0042B2F9 /* TabBarViewController.swift */,
+				089895B229DDD8BA0042B2F9 /* AboutViewController.swift */,
+				089895B429DE00D20042B2F9 /* BiographyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,7 +188,10 @@
 				089895AD29DDCF400042B2F9 /* PersonalDatas.swift in Sources */,
 				08270D2A29D97AE0009D5DB8 /* WelcomeViewController.swift in Sources */,
 				08270D1A29D971AA009D5DB8 /* LoginViewController.swift in Sources */,
+				089895B329DDD8BA0042B2F9 /* AboutViewController.swift in Sources */,
+				089895B529DE00D20042B2F9 /* BiographyViewController.swift in Sources */,
 				08270D1629D971AA009D5DB8 /* AppDelegate.swift in Sources */,
+				089895B129DDD85D0042B2F9 /* TabBarViewController.swift in Sources */,
 				08270D1829D971AA009D5DB8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NCB777A2J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -361,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NCB777A2J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
