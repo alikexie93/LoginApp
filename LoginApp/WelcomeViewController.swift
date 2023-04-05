@@ -10,16 +10,16 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet var userLabel: UILabel!
+    @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var logoutButton: UIButton!
     
-    var usernameLabel: String!
+    var user = ""
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButton.layer.cornerRadius = 12
-        userLabel.text = usernameLabel
+        welcomeLabel.text = "Welcome, \(user)!"
     }
     
     override func viewWillLayoutSubviews() {

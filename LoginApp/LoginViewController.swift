@@ -15,6 +15,9 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
+    private let user = "Alexey"
+    private let password = "Password"
+    
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ final class LoginViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.usernameLabel = usernameTF.text
+        welcomeVC.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,42 +41,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        guard let usernameText = usernameTF.text, !usernameText.isEmpty else {
+        guard usernameTF.text == user, passwordTF.text == password else {
             showAlert(
-                withTitle: "Username textfield is empty",
-                andMessage: "Please, enter your username"
-            )
-            return
-        }
-        
-        guard let passwordText = passwordTF.text, !passwordText.isEmpty else {
-            showAlert(
-                withTitle: "Password textfield is empty",
-                andMessage: "Please, enter your password"
-            )
-            return
-        }
-        
-        let correctUsername = "Swift"
-        let isUsernameValid = NSPredicate(format: "SELF MATCHES %@", correctUsername)
-            .evaluate(with: usernameText)
-        
-        let correctPassword = "Password"
-        let isPasswordValid = NSPredicate(format: "SELF MATCHES %@", correctPassword)
-            .evaluate(with: passwordText)
-        
-        if !isUsernameValid {
-            showAlert(
-                withTitle: "Login or password is incorrect",
-                andMessage: "Please, enter correct login and password"
-            )
-            return
-        }
-        
-        if !isPasswordValid {
-            showAlert(
-                withTitle: "Login or password is incorrect",
-                andMessage: "Please, enter correct login and password"
+                title: "Login or password is incorrect",
+                message: "Please, enter correct login and password",
+                textField: passwordTF
             )
             return
         }
@@ -84,15 +56,15 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterDataTapped(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(withTitle: "Oops!",andMessage: "Your username is: Swift")
-            : showAlert(withTitle: "Oops!",andMessage: "Your username is: Password")
+            ? showAlert(title: "Oops!",message: "Your username is: Alexey")
+            : showAlert(title: "Oops!",message: "Your username is: Password")
     }
     
     //MARK: - Private method
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTF.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
