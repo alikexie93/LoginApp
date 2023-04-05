@@ -38,6 +38,6 @@ class WelcomeViewController: UIViewController {
             height: self.view.frame.size.height
         )
         
-        self.view.layer.insertSublayer(gradient, at: 0)
+        view.layer.insertSublayer(gradient, at: 0)
     }
 }
