@@ -106,33 +106,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="drQ-nr-NUb">
-                                <rect key="frame" x="77.333333333333329" y="60" width="238.66666666666669" height="210"/>
+                                <rect key="frame" x="124.33333333333333" y="60" width="144.33333333333337" height="210"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4wj-pr-NjN">
-                                        <rect key="frame" x="0.0" y="0.0" width="238.66666666666666" height="40.666666666666664"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpK-rr-8eO">
-                                                <rect key="frame" x="0.0" y="0.0" width="144.33333333333334" height="40.666666666666664"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8y-Xy-Zck">
-                                                <rect key="frame" x="152.33333333333331" y="0.0" width="68.666666666666686" height="40.666666666666664"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtc-RR-7mw">
-                                                <rect key="frame" x="229" y="0.0" width="9.6666666666666572" height="40.666666666666664"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpK-rr-8eO">
+                                        <rect key="frame" x="0.0" y="0.0" width="144.33333333333334" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Peace" translatesAutoresizingMaskIntoConstraints="NO" id="mq3-JZ-sRA">
-                                        <rect key="frame" x="52.666666666666671" y="76.666666666666643" width="133.33333333333331" height="133.33333333333337"/>
+                                        <rect key="frame" x="5.6666666666666714" y="76.666666666666643" width="133.33333333333331" height="133.33333333333337"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -162,7 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="logoutButton" destination="gtW-uD-ffS" id="DZU-7I-Rsg"/>
-                        <outlet property="userLabel" destination="r8y-Xy-Zck" id="R3M-Ad-YB9"/>
+                        <outlet property="welcomeLabel" destination="XpK-rr-8eO" id="Qnd-H3-T8v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="St5-iQ-45M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
