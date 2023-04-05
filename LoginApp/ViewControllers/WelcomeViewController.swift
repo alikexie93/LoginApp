@@ -7,19 +7,22 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var logoutButton: UIButton!
+    @IBOutlet var personLabel: UILabel!
     
-    var user = ""
+//    var user = ""
+//    var person = ""
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButton.layer.cornerRadius = 12
-        welcomeLabel.text = "Welcome, \(user)!"
+        welcomeLabel.text = "Привет, \(User.getUser().login)!"
+        personLabel.text = "Меня зовут \(User.getUser().person.name)"
     }
     
     override func viewWillLayoutSubviews() {
@@ -34,8 +37,8 @@ class WelcomeViewController: UIViewController {
         gradient.frame = CGRect(
             x: 0.0,
             y: 0.0,
-            width: self.view.frame.size.width,
-            height: self.view.frame.size.height
+            width: view.frame.size.width,
+            height: view.frame.size.height
         )
         
         view.layer.insertSublayer(gradient, at: 0)
