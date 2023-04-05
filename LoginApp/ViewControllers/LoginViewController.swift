@@ -15,19 +15,21 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
-    private let user = "Alexey"
-    private let password = "Password"
+    private let info = User.getUser()
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 12
+        usernameTF.text = info.login
+        passwordTF.text = info.password
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.user = info.login
+//        welcomeVC.person = info.person.name
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -41,7 +43,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        guard usernameTF.text == user, passwordTF.text == password else {
+        guard usernameTF.text == info.login, passwordTF.text == info.password else {
             showAlert(
                 title: "Login or password is incorrect",
                 message: "Please, enter correct login and password",
