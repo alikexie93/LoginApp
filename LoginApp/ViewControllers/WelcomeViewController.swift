@@ -14,6 +14,7 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var personLabel: UILabel!
     
+//    не отображаются данные 
 //    var user = ""
 //    var person = ""
     
