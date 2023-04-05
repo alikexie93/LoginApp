@@ -27,7 +27,8 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     //MARK: - IBActions
@@ -76,20 +77,15 @@ final class LoginViewController: UIViewController {
             )
             return
         }
+        
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        
     }
     
-    @IBAction func forgotUsernameTapped() {
-        showAlert(
-            withTitle: "Here is your username",
-            andMessage: "Your username is: Swift"
-        )
-    }
-    
-    @IBAction func forgotPasswordTapped() {
-        showAlert(
-            withTitle: "Here is your password",
-            andMessage: "Your password is: Password"
-        )
+    @IBAction func forgotRegisterDataTapped(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAlert(withTitle: "Oops!",andMessage: "Your username is: Swift")
+            : showAlert(withTitle: "Oops!",andMessage: "Your username is: Password")
     }
     
     //MARK: - Private method
